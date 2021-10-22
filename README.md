@@ -11,4 +11,7 @@ included: you can include them manually:
  - Copy "html/wp-includes/js/wp-emoji-release.min.js" into "wp-includes/js/"
 
 Some links may end up being invalid. You can fix these easily with a script or
-vim.
+vim:
+ - The image gallery images are not using the correct link. You can fix this by
+   running the following command:
+     sed 's/data-src-fg="\.\/wp-content/data-src-fg="\.\/\.\.\/wp-content/g' tapahtumahistoria/index.html
